@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+  <title>My Fourth styled page</title>
+   <link rel="stylesheet" href="{% static "css/stylesheet.css" %}"/>
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="{% url 'index' %}">Home page</a>
+  <li><a href="{% url 'musings' %}">Musings</a>
+  <li><a href="{% url 'town' %}">My town</a>
+  <li><a href="{% url 'links' %}">Links</a>
+</ul>
+
+<!-- Main content -->
+<h1>My fourth styled page</h1>
+
+<p>Welcome to my Links page!
+
+<p>It lacks images, but at least it has style.
+And it has links, even if they don't go
+anywhere&hellip;
+
+<p>There should be more here, but I don't know
+what yet.
+
+<!-- Sign and date the page, it's only polite! -->
+<address>{{ today }}<br>
+  by myself.</address>
+
+</body>
+</html>
